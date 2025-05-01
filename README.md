@@ -85,6 +85,19 @@ WHERE snapshot_time = (
   SELECT MAX(snapshot_time) FROM v_stations_bonus_analysis
 );
 ```
+## Conclusion
+
+This project allowed me to confirm, both through data and personal testing, that the conditions for earning fidelity points with Vélo Toulouse are based on two key situations:  
+either taking a bike from a full station (`free_stands = 0`), or returning one to an empty station (`available_bikes = 0`).
+
+These factors are not clearly documented by the service, but through SQL analysis and live experiments using my own Vélo Toulouse account, I was able to validate that these criteria are indeed what trigger point rewards.
+
+The version published here focuses on a lightweight and accessible workflow, allowing anyone to test the logic using a short data collection session or the provided sample dataset.  
+For those interested in a deeper analysis over time (seasonality, best locations, peak hours), the data collection script can be extended to run continuously.
+
+Ideally, if Vélo Toulouse were to make historical data openly available, users and researchers would no longer need to collect snapshots in real time.  
+My project was created precisely because this data was not accessible — I wanted to investigate the logic myself, without having to wait for official documentation or datasets.
+
 
 ---
 
