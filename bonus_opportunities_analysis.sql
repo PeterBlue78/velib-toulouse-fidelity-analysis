@@ -29,7 +29,7 @@ SELECT
   snapshot_time,
   available_bikes
 FROM v_stations_velo_snapshots
-WHERE station_name ILIKE '%MATABIAU GARE%'
+WHERE station_name LIKE '%MATABIAU GARE%'
 ORDER BY snapshot_time;
 
 -- Bonus opportunity classification (strict: 0 bikes or 0 free stands only)
