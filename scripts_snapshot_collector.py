@@ -1,4 +1,4 @@
-#For Google Collab
+# For Google Colab
 !pip install pytz
 !pip install duckdb pyarrow pandas
 
